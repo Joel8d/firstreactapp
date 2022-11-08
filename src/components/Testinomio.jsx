@@ -1,13 +1,13 @@
-import React from "react";
+import "../components/styles/Testimonio.css"
 
-export function Testimonio(){
+export function Testimonio(props){
     return(
         <div className="contenedor-testimonio">
-            <img className="image-testimonio" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile"/>
+            <img className="image-testimonio" src={props.imagen} alt="profile"/>
             <div className="contenedor-texto-testimonio">
-                <p className="nombre-testimonio">Joel Canul en Dallas</p>
-                <p className="cargo-testimonio">FrontEnd Developer en Google</p>
-                <p className="texto-testimonio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, consequatur molestias. Iusto corrupti soluta voluptate repudiandae delectus quo architecto, aliquam nam tempore et maxime suscipit ea quam quis labore? Aspernatur?</p>       
+                <p className="nombre-testimonio">{props.nombre} en {props.pais}</p>
+                <p className="cargo-testimonio">{props.cargo} en {props.empresa}</p>
+                <p className="texto-testimonio">{props.tesimonio}</p>       
             </div>
         </div>
     )
